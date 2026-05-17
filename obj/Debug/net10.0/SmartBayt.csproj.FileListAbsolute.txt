@@ -156,3 +156,5 @@ C:\Users\11\Desktop\SmartBayt\SmartBayt\obj\Debug\net10.0\SmartBayt.genruntimeco
 C:\Users\11\Desktop\SmartBayt\SmartBayt\obj\Debug\net10.0\ref\SmartBayt.dll
 C:\Users\11\Desktop\SmartBayt\SmartBayt\bin\Debug\net10.0\SmartBayt.staticwebassets.runtime.json
 C:\Users\11\Desktop\SmartBayt\SmartBayt\obj\Debug\net10.0\SmartBayt.sourcelink.json
+C:\Users\11\Desktop\SmartBayt\SmartBayt\bin\Debug\net10.0\Npgsql.dll
+C:\Users\11\Desktop\SmartBayt\SmartBayt\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

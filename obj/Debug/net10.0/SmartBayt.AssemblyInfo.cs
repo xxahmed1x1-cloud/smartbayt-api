@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartBayt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99b88b08d0a2d12f4aaf1687f6307eff86afbbdf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae96adb5dd0c9ca56b856c14d1cab074894345e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartBayt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartBayt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
