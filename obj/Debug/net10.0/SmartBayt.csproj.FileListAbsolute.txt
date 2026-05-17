@@ -155,4 +155,4 @@ C:\Users\11\Desktop\SmartBayt\SmartBayt\obj\Debug\net10.0\SmartBayt.pdb
 C:\Users\11\Desktop\SmartBayt\SmartBayt\obj\Debug\net10.0\SmartBayt.genruntimeconfig.cache
 C:\Users\11\Desktop\SmartBayt\SmartBayt\obj\Debug\net10.0\ref\SmartBayt.dll
 C:\Users\11\Desktop\SmartBayt\SmartBayt\bin\Debug\net10.0\SmartBayt.staticwebassets.runtime.json
-C:\Users\11\Desktop\SmartBayt\SmartBayt\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\11\Desktop\SmartBayt\SmartBayt\obj\Debug\net10.0\SmartBayt.sourcelink.json
