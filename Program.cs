@@ -8,8 +8,21 @@ using SmartBayt.Helpers;
 var builder = WebApplication.CreateBuilder(args);
 
 // ─── Database ─────────────────────────────────────────────
+// Railway بيبعت DATABASE_URL - نقراه مباشرة
+var connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection")
+    ?? Environment.GetEnvironmentVariable("DATABASE_URL")
+    ?? builder.Configuration.GetConnectionString("DefaultConnection");
+
+// لو جاي بصيغة postgresql:// نحوله لصيغة Npgsql
+if (connectionString != null && connectionString.StartsWith("postgresql://"))
+{
+    var uri = new Uri(connectionString);
+    var userInfo = uri.UserInfo.Split(':');
+    connectionString = $"Host={uri.Host};Port={uri.Port};Database={uri.AbsolutePath.TrimStart('/')};Username={userInfo[0]};Password={userInfo[1]};SSL Mode=Require;Trust Server Certificate=true";
+}
+
 builder.Services.AddDbContext<AppDbContext>(opt =>
-    opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    opt.UseNpgsql(connectionString));
 
 // ─── JWT ──────────────────────────────────────────────────
 builder.Services.AddSingleton<JwtHelper>();
@@ -35,11 +48,11 @@ builder.Services.AddAuthorization();
 builder.Services.AddCors(opt =>
     opt.AddPolicy("Frontend", p => p
         .WithOrigins(
-    "http://localhost:5173",
-    "http://localhost:3000",
-    "http://localhost:8080",
-    builder.Configuration["Frontend:Url"] ?? "http://localhost:5173"
-)
+            "http://localhost:5173",
+            "http://localhost:3000",
+            "https://smartbayt-frontend.vercel.app",
+            builder.Configuration["Frontend:Url"] ?? "http://localhost:5173"
+        )
         .AllowAnyHeader()
         .AllowAnyMethod()
         .AllowCredentials()
