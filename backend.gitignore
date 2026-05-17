@@ -1,0 +1,26 @@
+﻿# Build
+bin/
+obj/
+publish/
+
+# Environment & Secrets
+appsettings.Production.json
+*.user
+
+# Database
+*.mdf
+*.ldf
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+.vs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Migrations (optional - some prefer to include these)
+# */Migrations/
