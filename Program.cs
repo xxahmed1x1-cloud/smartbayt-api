@@ -47,15 +47,9 @@ builder.Services.AddAuthorization();
 // ─── CORS ─────────────────────────────────────────────────
 builder.Services.AddCors(opt =>
     opt.AddPolicy("Frontend", p => p
-        .WithOrigins(
-            "http://localhost:5173",
-            "http://localhost:3000",
-            "https://smartbayt-frontend.vercel.app",
-            builder.Configuration["Frontend:Url"] ?? "http://localhost:5173"
-        )
+        .AllowAnyOrigin()
         .AllowAnyHeader()
         .AllowAnyMethod()
-        .AllowCredentials()
     )
 );
 
